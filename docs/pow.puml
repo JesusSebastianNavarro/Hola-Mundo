@@ -1,0 +1,37 @@
+@startuml pow
+class pow
+class Juego
+class Pelota
+class Comida
+class Caca
+class Patineta
+class Ropa
+class Higiene
+class Medicina
+class Carro
+class Moneda
+class Mascota
+
+Juego <|-- Patineta 
+Juego <|-- Pelota 
+Juego <|-- Carro
+Moneda <|-- Higiene
+
+pow o-- Juego
+pow o-- Medicina
+pow *-- Higiene
+pow *-- Mascota
+pow *-- Caca
+pow o-- Comida
+pow o-- Ropa 
+
+Comida o-- Moneda
+Ropa o-- Moneda
+Medicina o-- Moneda
+Mascota o-- Moneda
+Juego --|> Moneda
+
+Moneda<|--Caca
+Mascota o-- Ropa
+
+@enduml
